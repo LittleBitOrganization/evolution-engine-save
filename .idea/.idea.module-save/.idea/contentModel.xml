@@ -7,13 +7,11 @@
         <e p="Resources" t="Include">
           <e p="BillingMode.json" t="Include" />
         </e>
-        <e p="Scripts" t="Include">
+        <e p="Save Module" t="Include">
           <e p="ISaver.cs" t="Include" />
           <e p="ISaveService.cs" t="Include" />
-          <e p="IService.cs" t="Include" />
           <e p="JsonSaver.cs" t="Include" />
           <e p="SaveService.cs" t="Include" />
-          <e p="Services.cs" t="Include" />
         </e>
       </e>
       <e p="module-save.sln" t="IncludeFlat" />
