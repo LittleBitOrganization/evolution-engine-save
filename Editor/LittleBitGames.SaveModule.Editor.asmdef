@@ -1,8 +1,12 @@
 {
-    "name": "LittleBitGames.Garden.Save",
+    "name": "LittleBitGames.SaveModule.Editor",
     "rootNamespace": "",
-    "references": [],
-    "includePlatforms": [],
+    "references": [
+        "LittleBitGames.Garden.Save"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
