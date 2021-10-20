@@ -1,19 +1,19 @@
 public class SaveService : IService, ISaveService
 {
-    private ISaver _dataSaver;
+    private IDataSaver _dataDataSaver;
 
-    public SaveService(ISaver dataSaver)
+    public SaveService(IDataSaver dataDataSaver)
     {
-        _dataSaver = dataSaver;
+        _dataDataSaver = dataDataSaver;
     }
 
     public void SaveData(string key, object data)
     {
-        _dataSaver.SaveData(key, data);
+        _dataDataSaver.SaveData(key, data);
     }
 
     public T LoadData<T>(string key)
     {
-        return _dataSaver.LoadData<T>(key);
+        return _dataDataSaver.LoadData<T>(key);
     }
 }

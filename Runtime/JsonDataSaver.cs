@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class JsonSaver : ISaver
+public class JsonDataSaver : IDataSaver
 {
     public void SaveData(string key, object data)
     {
