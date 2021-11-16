@@ -5,12 +5,11 @@ namespace LittleBit.Modules.SaveModule
     public class SaveService : ISaveService
     {
         private IDataSaver _dataSaver;
-
+     
         public SaveService(IDataSaver dataSaver)
         {
             _dataSaver = dataSaver;
         }
-
         public void SaveData(string key, object data)
         {
             _dataSaver.SaveData(key, data);
