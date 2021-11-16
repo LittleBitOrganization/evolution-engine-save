@@ -1,5 +1,8 @@
-public interface IDataSaver
+namespace LittleBit.Modules.SaveModule
 {
-    void SaveData(string key, object data);
-    T LoadData<T>(string key);
+    public interface IDataSaver
+    {
+        void SaveData(string key, object data);
+        T LoadData<T>(string key);
+    }
 }

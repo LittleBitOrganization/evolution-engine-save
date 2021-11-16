@@ -1,19 +1,24 @@
-public class SaveService : IService, ISaveService
+using LittleBit.Modules.CoreModule;
+
+namespace LittleBit.Modules.SaveModule
 {
-    private IDataSaver _dataDataSaver;
-
-    public SaveService(IDataSaver dataDataSaver)
+    public class SaveService : ISaveService
     {
-        _dataDataSaver = dataDataSaver;
-    }
+        private IDataSaver _dataSaver;
 
-    public void SaveData(string key, object data)
-    {
-        _dataDataSaver.SaveData(key, data);
-    }
+        public SaveService(IDataSaver dataSaver)
+        {
+            _dataSaver = dataSaver;
+        }
 
-    public T LoadData<T>(string key)
-    {
-        return _dataDataSaver.LoadData<T>(key);
+        public void SaveData(string key, object data)
+        {
+            _dataSaver.SaveData(key, data);
+        }
+
+        public T LoadData<T>(string key) where T : Data
+        {
+            return _dataSaver.LoadData<T>(key);
+        }
     }
 }

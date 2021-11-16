@@ -1,15 +1,18 @@
 using UnityEngine;
 
-public class JsonDataSaver : IDataSaver
+namespace LittleBit.Modules.SaveModule
 {
-    public void SaveData(string key, object data)
+    public class JsonDataSaver : IDataSaver
     {
-        var jsonData = JsonUtility.ToJson(data);
-        PlayerPrefs.SetString(key, jsonData);
-    }
+        public void SaveData(string key, object data)
+        {
+            var jsonData = JsonUtility.ToJson(data);
+            PlayerPrefs.SetString(key, jsonData);
+        }
 
-    public T LoadData<T>(string key)
-    {
-        return JsonUtility.FromJson<T>(PlayerPrefs.GetString(key));
+        public T LoadData<T>(string key)
+        {
+            return JsonUtility.FromJson<T>(PlayerPrefs.GetString(key));
+        }
     }
 }
