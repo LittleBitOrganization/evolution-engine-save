@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using LittleBit.Modules.CoreModule;
+using UnityEngine.Scripting;
 
 namespace LittleBit.Modules.SaveModule
 {
@@ -7,6 +8,7 @@ namespace LittleBit.Modules.SaveModule
     {
         private readonly List<ISavable> _savables;
         
+        [Preserve]
         public SaverService(ILifecycle lifecycle)
         {
             _savables = new List<ISavable>();
