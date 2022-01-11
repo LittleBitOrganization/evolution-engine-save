@@ -4,5 +4,6 @@ namespace LittleBit.Modules.SaveModule
     {
         void SaveData(string key, object data);
         T LoadData<T>(string key);
+        void ClearData(string key);
     }
 }

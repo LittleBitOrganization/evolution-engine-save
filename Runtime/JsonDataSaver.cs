@@ -18,6 +18,11 @@ namespace LittleBit.Modules.SaveModule
             PlayerPrefs.SetString(key, jsonData);
         }
 
+        public void ClearData(string key)
+        {
+            PlayerPrefs.DeleteKey(key);
+        }
+
         public T LoadData<T>(string key)
         {
             return JsonUtility.FromJson<T>(PlayerPrefs.GetString(key));

@@ -22,5 +22,10 @@ namespace LittleBit.Modules.SaveModule
         {
             return _dataSaver.LoadData<T>(key);
         }
+
+        public void ClearData(string key)
+        {
+            _dataSaver.ClearData(key);
+        }
     }
 }
