@@ -12,8 +12,9 @@ namespace LittleBit.Modules.SaveModule
         public SaverService(ILifecycle lifecycle)
         {
             _savables = new List<ISavable>();
-            lifecycle.onApplicationFocus += OnApplicationFocus;
-            lifecycle.onApplicationQuit += OnApplicationQuit;
+            /*lifecycle.onApplicationFocus += OnApplicationFocus;
+            lifecycle.onApplicationQuit += OnApplicationQuit;*/
+            
         }
         public void AddSavableObject(ISavable savableObject)
         {
