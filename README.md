@@ -12,6 +12,6 @@
 ## Импорт
 ```JSON
 "dependencies": {
-	"com.littlebitgames.savemodule": "https://github.com/LittleBitOrganization/evolution-engine-save.git",
+    "com.littlebitgames.savemodule": "https://github.com/LittleBitOrganization/evolution-engine-save.git",
 }
 ```
